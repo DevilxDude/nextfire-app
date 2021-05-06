@@ -1,7 +1,7 @@
 import styles from '../../styles/Admin.module.css';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import AuthCheck from '../../components/AuthCheck';
-import Metatags from '../../components/Metatags';
+// import Metatags from '../../components/Metatags';
 import PostFeed from '../../components/PostFeed';
 import { auth, firestore, serverTimeStamp } from '../../lib/firebase';
 import { useRouter } from 'next/router';
@@ -13,7 +13,7 @@ import toast from 'react-hot-toast';
 export default function AdminPostsPage({}) {
   return (
     <main>
-      <Metatags title="Admin page" />
+      {/* <Metatags title="Admin page" /> */}
       <AuthCheck>
         <PostList />
         <CreateNewPost />

@@ -8,7 +8,7 @@ export default function ImageUploader() {
   const [downloadURL, setDownloadURL] = useState(null);
 
   const uploadFile = async (e) => {
-    const file = Array.from(e.target.files)[0];
+    const file: any = Array.from(e.target.files)[0];
     const extention = file.type.split('/')[1];
 
     const ref = storage.ref(
@@ -20,7 +20,7 @@ export default function ImageUploader() {
     const task = ref.put(file);
 
     task.on(STATE_CHANGED, (snapshot) => {
-      const pct = (
+      const pct: any = (
         (snapshot.bytesTransferred / snapshot.totalBytes) *
         100
       ).toFixed(0);
